@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Completa de Estándares de Codificación</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>Guía Completa de Estándares de Codificación</h1>
+  <p>Mejores prácticas para escribir código profesional, escalable y mantenible</p>
+</header>
+
+<main>
+  <section id="introduccion">
+    <h2>¿Qué son los estándares de codificación?</h2>
+    <p>Los estándares de codificación son un conjunto de reglas y convenciones adoptadas por equipos de desarrollo para garantizar la consistencia en la escritura de código. Van más allá de la sintaxis e incluyen:</p>
+    <ul>
+      <li>📝 <strong>Convenciones de nomenclatura</strong> (variables, funciones, clases).</li>
+      <li>📏 <strong>Estilo de formato</strong> (indentación, longitud de líneas).</li>
+      <li>📚 <strong>Estructura de archivos y proyectos</strong>.</li>
+      <li>🔍 <strong>Prácticas de documentación</strong>.</li>
+    </ul>
+
+    <h3>Impacto en el desarrollo</h3>
+    <div class="impacto-grid">
+      <div class="impacto-card">
+        <h4>Para equipos</h4>
+        <p>Reduce la curva de aprendizaje para nuevos miembros y facilita revisiones de código.</p>
+      </div>
+      <div class="impacto-card">
+        <h4>Para proyectos</h4>
+        <p>Minimiza errores y technical debt a largo plazo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="lenguajes">
+    <h2>Estándares Detallados por Lenguaje</h2>
+
+    <div class="lenguaje-card">
+      <h3>JavaScript (ECMAScript)</h3>
+      <ul>
+        <li><strong>Variables:</strong> <code>const</code> para valores fijos, <code>let</code> para mutables.</li>
+        <li><strong>Ejemplo:</strong>
+          <pre><code>// Bueno
+const userCount = 10;
+let isLoading = true;
+
+// Evitar
+var oldVariable = "deprecated";</code></pre>
+        </li>
+        <li><strong>Funciones:</strong> Usar arrow functions cuando sea posible.
+          <pre><code>// Recomendado
+const sum = (a, b) => a + b;</code></pre>
+        </li>
+      </ul>
+    </div>
+
+    <div class="lenguaje-card">
+      <h3>Python (PEP 8)</h3>
+      <ul>
+        <li><strong>Indentación:</strong> 4 espacios (nunca tabs).</li>
+        <li><strong>Imports:</strong> Agrupados y ordenados:
+          <pre><code># Correcto
+import os
+from sys import path</code></pre>
+        </li>
+        <li><strong>Docstrings:</strong> Usar formato Google o NumPy:
+          <pre><code>def calcular_iva(monto):
+    """Calcula el IVA del 19% para un monto dado.
+
+    Args:
+        monto (float): Valor base para el cálculo.
+
+    Returns:
+        float: Valor del IVA.
+    """
+    return monto * 0.19</code></pre>
+        </li>
+      </ul>
+    </div>
+
+    <div class="lenguaje-card">
+      <h3>HTML/CSS</h3>
+      <h4>HTML Semántico</h4>
+      <ul>
+        <li>Usar <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;time&gt;</code>.</li>
+        <li>Ejemplo:
+          <pre><code>&lt;header&gt;
+    &lt;h1&gt;Título Principal&lt;/h1&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+        </li>
+      </ul>
+      <h4>CSS (BEM Methodology)</h4>
+      <pre><code>/* Bloque */
+.menu { ... }
+
+/* Elemento */
+.menu__item { ... }
+
+/* Modificador */
+.menu__item--active { ... }</code></pre>
+    </div>
+  </section>
+
+  <section id="metodologias">
+    <h2>Metodologías Avanzadas</h2>
+    <div class="metodologia-card">
+      <h3>Clean Code</h3>
+      <p>Principios fundamentales:</p>
+      <ul>
+        <li>⚡ <strong>KISS</strong> (Keep It Simple, Stupid).</li>
+        <li>🧹 <strong>DRY</strong> (Don't Repeat Yourself).</li>
+        <li>📐 <strong>SOLID</strong> (Principios de diseño orientado a objetos).</li>
+      </ul>
+    </div>
+    <div class="metodologia-card">
+      <h3>Git Flow</h3>
+      <p>Estándar para control de versiones:</p>
+      <pre><code>feature/   # Nuevas funcionalidades
+release/   # Preparación para producción
+hotfix/    # Correcciones urgentes</code></pre>
+    </div>
+  </section>
+
+  <section id="herramientas">
+    <h2>Herramientas Esenciales</h2>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <h3>Linters</h3>
+        <ul>
+          <li>ESLint (JavaScript)</li>
+          <li>Pylint (Python)</li>
+          <li>Stylelint (CSS)</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3>Formatters</h3>
+        <ul>
+          <li>Prettier (Multi-lenguaje)</li>
+          <li>Black (Python)</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3>Documentación</h3>
+        <ul>
+          <li>JSDoc (JavaScript)</li>
+          <li>Sphinx (Python)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="casos-estudio">
+    <h2>Casos de Estudio Reales</h2>
+    <div class="caso-card">
+      <h3>Airbnb JavaScript Style Guide</h3>
+      <p>Uno de los estándares más adoptados en la industria:</p>
+      <ul>
+        <li>Prohibido el uso de <code>var</code>.</li>
+        <li>Uso obligatorio de template literals: <code>`Hola ${nombre}`</code>.</li>
+      </ul>
+    </div>
+    <div class="caso-card">
+      <h3>Google Python Style Guide</h3>
+      <p>Extensión de PEP 8 con reglas adicionales:</p>
+      <ul>
+        <li>Líneas máximas de 80 caracteres.</li>
+        <li>Type hints obligatorios en código nuevo.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>© 2025 - Guía creada para desarrolladores profesionales</p>
+    <p>📄 Actualizada por <strong>Norbey D Gutierrez Carvajal</strong></p>
+    <p>¿Quieres contribuir? <a href="#">Envía un pull request</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

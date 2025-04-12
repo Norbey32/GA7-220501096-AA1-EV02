@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomenclatura de Variables y Constantes</title>
+  <link rel="stylesheet" href="css/styles-nomenclatura.css">
+</head>
+<body>
+<header>
+  <h1>Nomenclatura de Variables y Constantes</h1>
+  <p>Convenciones y mejores prácticas para nombrar elementos en tu código</p>
+</header>
+
+<main>
+  <section id="introduccion">
+    <h2>¿Por qué importa la nomenclatura?</h2>
+    <p>Un buen nombramiento de variables y constantes mejora la legibilidad, mantenibilidad y autodocumentación del código. Principios clave:</p>
+    <ul>
+      <li>🚀 <strong>Claridad:</strong> El nombre debe describir su propósito sin ambigüedad.</li>
+      <li>📏 <strong>Consistencia:</strong> Seguir convenciones del lenguaje o equipo.</li>
+      <li>🔍 <strong>Busquedad:</strong> Usar términos buscables (evitar abreviaciones crípticas).</li>
+    </ul>
+  </section>
+
+  <section id="convenciones">
+    <h2>Convenciones por Lenguaje</h2>
+
+    <div class="lenguaje-card">
+      <h3>JavaScript</h3>
+      <ul>
+        <li><strong>camelCase:</strong> Para variables y funciones.</li>
+        <li><strong>PascalCase:</strong> Para clases o constructores.</li>
+        <li><strong>UPPER_SNAKE_CASE:</strong> Para constantes globales.</li>
+        <li><strong>Ejemplos:</strong>
+          <pre><code>// Variables
+const userCount = 10;
+let isLoading = true;
+
+// Constantes globales
+const API_KEY = "abc123";
+
+// Clases
+class UserProfile { ... }</code></pre>
+        </li>
+      </ul>
+    </div>
+
+    <div class="lenguaje-card">
+      <h3>Python</h3>
+      <ul>
+        <li><strong>snake_case:</strong> Para variables, funciones y métodos.</li>
+        <li><strong>PascalCase:</strong> Para clases.</li>
+        <li><strong>UPPER_SNAKE_CASE:</strong> Para constantes.</li>
+        <li><strong>Ejemplos:</strong>
+          <pre><code># Variables
+user_count = 10
+
+# Constantes
+MAX_RETRIES = 3
+
+# Clases
+class DatabaseConnection: ...</code></pre>
+        </li>
+      </ul>
+    </div>
+
+    <div class="lenguaje-card">
+      <h3>Java/C#</h3>
+      <ul>
+        <li><strong>camelCase:</strong> Para variables y métodos.</li>
+        <li><strong>PascalCase:</strong> Para clases e interfaces.</li>
+        <li><strong>_prefix:</strong> Para campos privados (opcional).</li>
+        <li><strong>Ejemplos:</strong>
+          <pre><code>// Java
+private int userCount;
+public void calculateTotal() { ... }
+
+// C#
+public class UserService { ... }</code></pre>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="anti-patrones">
+    <h2>Anti-patrones comunes</h2>
+    <div class="anti-patron-card">
+      <h3>Nombres genéricos</h3>
+      <p>Evitar términos como <code>data</code>, <code>value</code>, o <code>temp</code> que no describen el contenido.</p>
+      <pre><code>// ❌ Mal
+let temp = getUser();
+
+// ✅ Bien
+let currentUser = getUser();</code></pre>
+    </div>
+    <div class="anti-patron-card">
+      <h3>Abreviaciones oscuras</h3>
+      <p>Ejemplo: <code>usrCnt</code> en lugar de <code>userCount</code>.</p>
+    </div>
+  </section>
+
+  <section id="herramientas">
+    <h2>Herramientas para verificar nomenclatura</h2>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <h3>Linters</h3>
+        <ul>
+          <li>ESLint (reglas como <code>camelcase</code>).</li>
+          <li>Pylint (para Python).</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3>Extensiones IDE</h3>
+        <ul>
+          <li>SonarLint.</li>
+          <li>EditorConfig.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+      <section id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-card">
+        <h3>¿Qué hacer si heredo código con mala nomenclatura?</h3>
+        <p>Refactoriza progresivamente y documenta los cambios.</p>
+  </div>
+  <div class="faq-card">
+        <h3>¿Prefijos como "is" o "has" son recomendables?</h3>
+        <p>Sí, para booleanos: <code>isActive</code>, <code>hasPermission</code>.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 - Guía de nomenclatura para desarrolladores</p>
+  <p>📄 Actualizada por <strong>Norbey D. Gutierrez Carvvajal </strong></p>
+</footer>
+</body>
+</html>

@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilos generales (coherentes con la primera página) */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.8;
@@ -38,8 +38,8 @@ main {
   padding: 0 2rem;
 }
 
-/* Secciones mejoradas */
-.lenguaje-card, .metodologia-card, .caso-card {
+/* Componentes reutilizables */
+.lenguaje-card, .anti-patron-card, .tool-card {
   background: #fff;
   border-radius: 10px;
   padding: 2rem;
@@ -49,17 +49,9 @@ main {
 }
 
 pre {
-  background: #1e293b;  /* <- Eliminar este color */
-  color: #f8fafc;       /* <- Eliminar color de texto claro */
-  padding: 1rem;
-  border-radius: 6px;
-  overflow-x: auto;
-}
-
-pre {
-  background: #f8f9fa;   /* Fondo gris claro */
-  color: #333;           /* Texto oscuro */
-  border: 1px solid #ddd; /* Borde sutil */
+  background: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
   padding: 1rem;
   border-radius: 6px;
   overflow-x: auto;
@@ -73,18 +65,11 @@ code {
 }
 
 /* Grids */
-.impacto-grid, .tools-grid {
+.tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
-}
-
-.impacto-card, .tool-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* Footer */
@@ -96,17 +81,9 @@ footer {
   margin-top: 4rem;
 }
 
-.footer-content a {
-  color: #93c5fd;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
-  }
-
-  .lenguaje-card, .metodologia-card {
-    padding: 1.5rem;
   }
 }

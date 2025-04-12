@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía de Nomenclatura: Clases, Métodos y Comentarios</title>
+  <link rel="stylesheet" href="css/styles-clases-metodos.css">
+</head>
+<body>
+<header>
+  <h1>Nomenclatura para Clases, Métodos y Comentarios</h1>
+  <p>Estándares profesionales para código limpio y mantenible</p>
+</header>
+
+<main>
+  <!-- Introducción -->
+  <section class="intro-section">
+    <h2>Importancia de una buena nomenclatura</h2>
+    <div class="intro-card">
+      <p>Un código bien nombrado es <strong>autodocumentado</strong> y facilita:</p>
+      <ul>
+        <li>✅ <strong>Legibilidad</strong>: Cualquier desarrollador entiende su función.</li>
+        <li>✅ <strong>Mantenimiento</strong>: Reduce la necesidad de comentarios excesivos.</li>
+        <li>✅ <strong>Escalabilidad</strong>: Permite crecer el proyecto sin confusión.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Clases -->
+  <section class="section-box">
+    <h2>1. Convenciones para Clases</h2>
+    <div class="content-box">
+      <h3>✔️ PascalCase y Sustantivos</h3>
+      <p>Las clases deben nombrarse con <strong>PascalCase</strong> y describir <strong>qué son</strong>, no qué hacen.</p>
+      <div class="code-example">
+        <p><strong>Correcto:</strong></p>
+        <pre><code>class UserManager { ... }
+class PaymentGateway { ... }</code></pre>
+        <p><strong>Incorrecto:</strong></p>
+        <pre><code>class userManager { ... }  // camelCase ❌
+class ProcessPayment { ... }  // Verbo (suena a método) ❌</code></pre>
+      </div>
+    </div>
+
+    <div class="content-box">
+      <h3>✔️ Sufijos para Patrones de Diseño</h3>
+      <p>Si implementas un patrón, usa nombres estándar:</p>
+      <ul>
+        <li><code>Factory</code> → <code>PaymentFactory</code></li>
+        <li><code>Singleton</code> → <code>DatabaseConnection</code></li>
+        <li><code>Decorator</code> → <code>LoggerDecorator</code></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Métodos -->
+  <section class="section-box">
+    <h2>2. Convenciones para Métodos</h2>
+    <div class="content-box">
+      <h3>✔️ camelCase y Verbos</h3>
+      <p>Los métodos deben ser <strong>acciones</strong> y usar <strong>camelCase</strong>.</p>
+      <div class="code-example">
+        <p><strong>Correcto:</strong></p>
+        <pre><code>function calculateTotal() { ... }
+function sendEmail() { ... }</code></pre>
+        <p><strong>Incorrecto:</strong></p>
+        <pre><code>function CalculateTotal() { ... }  // PascalCase ❌
+function total() { ... }  // ¿Es un método o propiedad? ❌</code></pre>
+      </div>
+    </div>
+
+    <div class="content-box">
+      <h3>✔️ Prefijos para Métodos Especiales</h3>
+      <ul>
+        <li><strong>Getters/Setters</strong> → <code>getUser()</code>, <code>setName()</code></li>
+        <li><strong>Booleanos</strong> → <code>isActive()</code>, <code>hasPermission()</code></li>
+        <li><strong>Eventos</strong> → <code>onClick()</code>, <code>onLoad()</code></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Comentarios -->
+  <section class="section-box">
+    <h2>3. Estándares para Comentarios</h2>
+    <div class="content-box">
+      <h3>✔️ Documentación Formal (JSDoc/JavaDoc)</h3>
+      <p>Usa comentarios estructurados para explicar funciones complejas.</p>
+      <div class="code-example">
+                    <pre><code>/**
+ * Calcula el descuento aplicable a un producto.
+ * @param {number} price - Precio original.
+ * @param {string} promoCode - Código de descuento.
+ * @returns {number} Precio final con descuento.
+ */
+function applyDiscount(price, promoCode) { ... }</code></pre>
+      </div>
+    </div>
+
+    <div class="content-box">
+      <h3>✔️ Comentarios Inline (Solo para "por qué")</h3>
+      <p>Evita explicar "qué hace el código" (debe ser autodocumentado).</p>
+      <div class="code-example">
+        <p><strong>Correcto:</strong></p>
+        <pre><code>// Usar Math.floor por compatibilidad con navegadores antiguos
+const rounded = Math.floor(value);</code></pre>
+        <p><strong>Incorrecto:</strong></p>
+        <pre><code>// Calcula el valor redondeado  ❌ (redundante)
+const rounded = Math.floor(value);</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Herramientas -->
+  <section class="section-box">
+    <h2>4. Herramientas Recomendadas</h2>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <h3>Linters</h3>
+        <ul>
+          <li>ESLint (JavaScript)</li>
+          <li>Pylint (Python)</li>
+          <li>Checkstyle (Java)</li>
+        </ul>
+      </div>
+      <div class="tool-card">
+        <h3>Generadores de Docs</h3>
+        <ul>
+          <li>Swagger (APIs)</li>
+          <li>Doxygen (C++)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 - Guía de nomenclatura profesional | Basado en estándares de Google y Clean Code</p>
+  <p>📄 Actualizada por <strong>Norbey D. Gutierrez Carvajal</strong></p>
+</footer>
+</body>
+</html>
